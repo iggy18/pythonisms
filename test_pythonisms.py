@@ -10,7 +10,6 @@ def test_gen_comp():
 def test_print_list():
     assert print_list
 
-
 def test_iterthingy():
     assert IterThing
 
@@ -19,6 +18,7 @@ def test_iterthingy_example():
     expected = [1, 2, 4, 8, 16, 32, 64, 128, 256]
     assert actual == expected
 
+# generators save massive amounts of space when compared to returning a list that does the same thing. here I assert that the two functions that result in the same values differ in size.
 def test_size_of_list_vs_generater_where_list_where_generator_should_be_smaller():
     a = my_gen_comp(3000)
     b = print_list(3000)
